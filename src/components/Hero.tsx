@@ -21,7 +21,7 @@ export default function Hero() {
       <div className="flex flex-col sm:flex-row sm:items-start gap-8">
         <div className="w-36 h-36 sm:w-40 sm:h-40 border-2 border-foreground/10 flex items-center justify-center shrink-0">
           <div className="w-28 h-28 sm:w-32 sm:h-32 overflow-hidden bg-muted">
-            <DitherShader src="/my_face.png" gridSize={1} ditherMode="bayer" colorMode="duotone"
+            <DitherShader src={`${import.meta.env.BASE_URL}my_face.png`} gridSize={1} ditherMode="bayer" colorMode="duotone"
               primaryColor="#000000" secondaryColor="#ffffff" backgroundColor="#ffffff" threshold={0.5} objectFit="contain" className="h-full w-full" />
           </div>
         </div>

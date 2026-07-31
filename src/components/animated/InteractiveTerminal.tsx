@@ -34,7 +34,10 @@ const COMMANDS: Record<string, () => Line[]> = {
     { type: "output", text: "  Tools:      Git, GitHub, Docker, Postman, Linux" },
     { type: "output", text: "  Databases:  MySQL, MongoDB, PostgreSQL" },
   ],
-  resume: () => [{ type: "success", text: "Opening resume..." }, { type: "info", text: "Download: yashas_resume_JUL_4.pdf" }],
+  resume: () => {
+    window.open(`${import.meta.env.BASE_URL}yashas_resume_JUL_4.pdf`, "_blank");
+    return [{ type: "success" as const, text: "Opening resume..." }, { type: "info" as const, text: "Download: yashas_resume_JUL_4.pdf" }];
+  },
   github: () => [{ type: "success", text: "Opening GitHub profile..." }, { type: "info", text: "https://github.com/yashas-bhagwat" }],
   linkedin: () => [{ type: "success", text: "Opening LinkedIn profile..." }, { type: "info", text: "https://linkedin.com/in/yashas-bhagwat" }],
   contact: () => [
@@ -45,13 +48,16 @@ const COMMANDS: Record<string, () => Line[]> = {
     { type: "output", text: "  LinkedIn: linkedin.com/in/yashas-bhagwat" },
   ],
   clear: () => [],
-  "sudo hire yashas": () => [
-    { type: "success", text: "Access Granted." },
-    { type: "output", text: "" },
-    { type: "info", text: "Downloading Resume..." },
-    { type: "output", text: "" },
-    { type: "success", text: "Thank you for visiting!" },
-  ],
+  "sudo hire yashas": () => {
+    window.open(`${import.meta.env.BASE_URL}yashas_resume_JUL_4.pdf`, "_blank");
+    return [
+      { type: "success" as const, text: "Access Granted." },
+      { type: "output" as const, text: "" },
+      { type: "info" as const, text: "Downloading Resume..." },
+      { type: "output" as const, text: "" },
+      { type: "success" as const, text: "Thank you for visiting!" },
+    ];
+  },
 };
 
 const INTRO: Line[] = [
