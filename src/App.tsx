@@ -13,7 +13,7 @@ export default function App() {
       <Cursor />
       <ProgressBar />
       <Header />
-      <main className="max-w-3xl mx-auto px-6 sm:px-8 lg:px-4">
+      <main className="max-w-3xl mx-auto px-6">
         <Hero />
         <Education />
         <Projects />

@@ -14,7 +14,7 @@ export default function Header() {
 
   return (
     <StickyHeader>
-      <div className="max-w-3xl mx-auto flex items-center justify-between py-5 px-6 sm:px-8 lg:px-4">
+      <div className="max-w-3xl mx-auto flex items-center justify-between py-5 px-6">
         <a href={`${import.meta.env.BASE_URL}`} className="font-mono text-base font-medium hover:opacity-70 transition-opacity">
           yashas bhagwat
         </a>
